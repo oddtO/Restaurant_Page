@@ -16,6 +16,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: "./dist",
+    watchFiles: ["src/**/*", "public/**/*"],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
@@ -26,6 +27,10 @@ module.exports = {
       {
         test: /\.css/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },

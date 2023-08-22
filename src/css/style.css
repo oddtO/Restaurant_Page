@@ -1,0 +1,31 @@
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#content > nav {
+  background-color: #000;
+}
+
+#content > nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  height: 80px;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: url("../fonts/Raleway-Light.ttf");
+}
+
+#content:nth-child(2) {
+  flex: 1;
+}
