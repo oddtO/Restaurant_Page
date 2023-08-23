@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  gap: 100px;
 }
 header {
   position: relative;
@@ -36,6 +37,7 @@ body nav > ul {
 ul > li {
   height: 200%;
   display: flex;
+  font-size: 25px;
   width: 120px;
   justify-content: center;
 }
@@ -53,8 +55,20 @@ ul > li {
   ul > li {
     height: 125%;
   }
-  ul li[data-checked] {
+  ul > li[data-checked] {
     background-position: center 25px;
+  }
+
+  #content li {
+    font-size: 10px;
+  }
+
+  #content h2 {
+    font-size: 20px;
+  }
+
+  ul > li:last-child {
+    transform: scale(1.2);
   }
 }
 
@@ -69,7 +83,7 @@ button {
   color: white;
   user-select: none;
   cursor: pointer;
-  font-size: 25px;
+  font-size: inherit;
   font-family: "Raleway-Light";
 }
 
@@ -79,6 +93,9 @@ body > *:nth-child(2) {
 
 #content {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 li[data-checked] {
@@ -88,4 +105,112 @@ li[data-checked] {
 
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+main ul {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#content li {
+  width: 100%;
+  background-color: gray;
+  min-height: 600px;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+#content section {
+  --border-size-combined: 10px;
+
+  width: calc(100% - var(--border-size-combined));
+  height: calc(100% - var(--border-size-combined));
+  background-color: white;
+  text-align: justify;
+  /* flex-direction: column; */
+}
+
+#content :is(li, section) {
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+li .desc {
+  background-color: white;
+}
+
+#content section::before {
+  content: " ";
+  float: left;
+  height: 100%;
+  width: 30%;
+  /* background-color: violet;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    0 30%,
+    0 70%,
+    100% 100%,
+    0 100%,
+    0 70%,
+    0 30%
+  ); */
+  shape-outside: polygon(
+    0 0,
+    100% 0,
+    0 30%,
+    0 70%,
+    100% 100%,
+    0 100%,
+    0 70%,
+    0 30%
+  );
+}
+#content .after {
+  content: " ";
+  float: right;
+  height: 100%;
+  width: 30%;
+  /* background-color: violet;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 70%,
+    100% 100%,
+    0 100%,
+    100% 70%,
+    100% 30%
+  ); */
+  shape-outside: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 70%,
+    100% 100%,
+    0 100%,
+    100% 70%,
+    100% 30%
+  );
+}
+
+li h2 {
+  display: flex;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
