@@ -1,31 +1,83 @@
-#content {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("../img/pexels-waldemar-2290070.jpg");
+  background-position: 0 -200px;
+  background-size: cover;
 }
-
-#content > nav {
+header {
+  position: relative;
+}
+body nav {
   background-color: #000;
 }
+a {
+  text-decoration: none;
+  align-self: end;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
-#content > nav > ul {
+body nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  --list-height: 120px;
+  height: var(--list-height);
   gap: 120px;
-  height: 80px;
+  /* height: 80px; */
 }
 
+ul > li {
+  height: 100%;
+  display: flex;
+  width: 120px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-position: 0 0;
+  }
+  body nav > ul {
+    flex-direction: column;
+    height: 480px;
+    gap: 0;
+  }
+}
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway-Light.ttf");
+}
 button {
+  height: 100%;
   background-color: inherit;
   border: none;
   color: white;
   user-select: none;
   cursor: pointer;
   font-size: 25px;
-  font-family: url("../fonts/Raleway-Light.ttf");
+  font-family: "Raleway-Light";
 }
 
-#content:nth-child(2) {
+body > *:nth-child(2) {
   flex: 1;
+}
+
+#content {
+  position: relative;
+}
+
+li[data-checked] {
+  background-image: url("../img/NicePng_wood-sign-png_98922.webp");
+  /* background-color: blue; */
+  height: 200%;
+  background-position: center calc(var(--list-height) / 2);
+
+  background-size: contain;
+  background-repeat: no-repeat;
 }
