@@ -68,9 +68,6 @@ ul > li {
     gap: 0;
   }
 
-  #content {
-    --tile-additional-height: 400px !important;
-  }
   #content ul {
     width: 100% !important;
   }

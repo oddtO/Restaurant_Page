@@ -1,0 +1,28 @@
+#content .food {
+  height: calc(600px + var(--tile-additional-height));
+}
+
+.food img {
+  --food-size: 300px;
+  width: var(--food-size);
+  height: var(--food-size);
+  border-radius: 20px;
+  border: 4px solid #464646;
+}
+
+.food .desc {
+  display: block;
+  height: calc(var(--section-size) - var(--title-height));
+}
+.food .desc .centered-text {
+  height: 60%;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.food .price {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
