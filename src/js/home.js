@@ -4,15 +4,16 @@ import {
   addFlowingText,
   addCenteredText,
   loadTitle,
+	resetPage_getClearList
 } from "./tile.js";
 
 export default function loadHomePage() {
-  let mainUl = document.createElement("ul");
+  /* let mainUl = document.createElement("ul");
 
   let main = document.querySelector("#content > main");
   main.innerHTML = "";
-  main.append(mainUl);
-
+  main.append(mainUl); */
+let mainUl =resetPage_getClearList(); 
   loadTitle(mainUl, "Gastronomia Elegante");
   loadGreeting(
     mainUl,

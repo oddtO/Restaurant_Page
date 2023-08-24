@@ -13,14 +13,11 @@ export function createTile(idName, className) {
   return liElem;
 }
 
-
-
 export function addHeader(elem, headerText) {
-	let h2 = document.createElement('h2');
-	h2.className = 'title';
-	h2.textContent = headerText;
-	elem.querySelector(".after").after(h2);
-
+  let h2 = document.createElement("h2");
+  h2.className = "title";
+  h2.textContent = headerText;
+  elem.querySelector(".after").after(h2);
 }
 export function addFlowingText(elem, content) {
   let flowing = document.createElement("span");
@@ -44,4 +41,16 @@ export function createTitle(title) {
 export function loadTitle(mainUl, title) {
   let li = createTitle(title);
   mainUl.append(li);
+}
+
+
+export function resetPage_getClearList() {
+
+  let mainUl = document.createElement("ul");
+
+  let main = document.querySelector("#content > main");
+  main.innerHTML = "";
+  main.append(mainUl);
+	return mainUl;
+
 }

@@ -1,8 +1,9 @@
 import loadHomePage from "./home.js";
+import loadMenuPage from "./menu.js";
 
 const PAGE_TABLE = new Map([
   ["home", loadHomePage],
-  ["menu", null],
+  ["menu", loadMenuPage],
   ["contact", null],
 ]);
 
@@ -10,7 +11,7 @@ let navUl = document.querySelector("nav > ul");
 
 let current = document.querySelector('li[data-checked="true"] > button');
 
-  PAGE_TABLE.get(current.value)?.();
+PAGE_TABLE.get(current.value)?.();
 
 navUl.addEventListener("click", (event) => {
   let elem = event.target;
