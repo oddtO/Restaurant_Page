@@ -1,0 +1,26 @@
+#content .contact {
+  height: 700px;
+  width: 70%;
+}
+
+@media screen and (max-width: 560px) {
+  #content .contact {
+    width: 100% !important;
+  }
+}
+
+.contact .desc .centered-text {
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.name {
+  white-space: nowrap;
+}
