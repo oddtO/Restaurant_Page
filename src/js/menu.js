@@ -2,7 +2,7 @@ import {
   loadTitle,
   addHeader,
   addFlowingText,
-  addCenteredText,
+  addCentered,
   createTile,
   resetPage_getClearList,
 } from "./tile";
@@ -35,7 +35,6 @@ export default function loadMenuPage() {
       5 + i
     );
   }
-
 }
 
 function loadFood(mainUl, name, desc, imgSrc, price) {
@@ -47,7 +46,7 @@ function createFood(name, desc, imgSrc, price) {
   let li = createTile("", "food");
   addHeader(li, name);
   addFlowingText(li, desc);
-  addCenteredText(
+  addCentered(
     li,
     `
                   <img

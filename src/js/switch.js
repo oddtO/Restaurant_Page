@@ -1,10 +1,11 @@
 import loadHomePage from "./home.js";
 import loadMenuPage from "./menu.js";
+import loadContactsPage from "./contact.js";
 
 const PAGE_TABLE = new Map([
   ["home", loadHomePage],
   ["menu", loadMenuPage],
-  ["contact", null],
+  ["contact", loadContactsPage],
 ]);
 
 let navUl = document.querySelector("nav > ul");

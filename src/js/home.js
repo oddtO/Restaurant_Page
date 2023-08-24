@@ -2,18 +2,13 @@ import {
   createTile,
   addHeader,
   addFlowingText,
-  addCenteredText,
+  addCentered,
   loadTitle,
-	resetPage_getClearList
+  resetPage_getClearList,
 } from "./tile.js";
 
 export default function loadHomePage() {
-  /* let mainUl = document.createElement("ul");
-
-  let main = document.querySelector("#content > main");
-  main.innerHTML = "";
-  main.append(mainUl); */
-let mainUl =resetPage_getClearList(); 
+  let mainUl = resetPage_getClearList();
   loadTitle(mainUl, "Gastronomia Elegante");
   loadGreeting(
     mainUl,
@@ -93,12 +88,12 @@ function createGreeting(content) {
 function createHours(content) {
   let li = createTile("hours", "");
   addHeader(li, "Hours");
-  addCenteredText(li, content);
+  addCentered(li, content);
   return li;
 }
 function createLocation(content) {
   let li = createTile("location", "");
   addHeader(li, "Location");
-  addCenteredText(li, content);
+  addCentered(li, content);
   return li;
 }

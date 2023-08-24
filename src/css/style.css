@@ -144,6 +144,7 @@ li[data-checked="true"] {
 main {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 main > ul {
   width: 50%;

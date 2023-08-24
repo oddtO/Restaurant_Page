@@ -25,7 +25,7 @@ export function addFlowingText(elem, content) {
   flowing.insertAdjacentHTML("beforeend", content);
   elem.querySelector(".desc").append(flowing);
 }
-export function addCenteredText(elem, content) {
+export function addCentered(elem, content) {
   let centered = document.createElement("span");
   centered.className = "centered-text";
   centered.insertAdjacentHTML("beforeend", content);
@@ -33,7 +33,7 @@ export function addCenteredText(elem, content) {
 }
 export function createTitle(title) {
   let li = createTile("", "title");
-  addCenteredText(li, title);
+  addCentered(li, title);
 
   return li;
 }
@@ -43,14 +43,11 @@ export function loadTitle(mainUl, title) {
   mainUl.append(li);
 }
 
-
 export function resetPage_getClearList() {
-
   let mainUl = document.createElement("ul");
 
   let main = document.querySelector("#content > main");
   main.innerHTML = "";
   main.append(mainUl);
-	return mainUl;
-
+  return mainUl;
 }
