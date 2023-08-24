@@ -28,7 +28,7 @@ li.title .centered-text {
   }
 
   #content #location {
-    height: 100px !important;
+    height: 150px !important;
     width: 100% !important;
   }
 }
@@ -40,6 +40,27 @@ li.title .centered-text {
 #content #hours {
   height: calc(400px + var(--tile-additional-height));
   width: 70%;
+
+
+}
+
+@media screen and (max-width: 1800px) {
+
+#content #hours {
+--tile-additional-height: 100px;
+
+}
+
+
+}
+@media screen and (max-width: 1600px) {
+
+#content #hours {
+--tile-additional-height: 200px;
+
+}
+
+
 }
 
 #hours .centered-text {

@@ -53,7 +53,7 @@ ul:not(.contact li) > li {
   justify-content: center;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   #content {
     --tile-additional-height: 300px !important;
   }
@@ -75,7 +75,7 @@ ul:not(.contact li) > li {
   ul > li:not(#content li) {
     height: 125%;
   }
-  ul > li[data-checked] {
+  ul > li[data-checked="true"] {
     background-position: center 25px;
   }
 
@@ -132,7 +132,7 @@ body > *:nth-child(2) {
   --tile-additional-height: 0px;
 }
 
-li[data-checked] {
+li[data-checked="true"] {
   background-image: url("../img/NicePng_wood-sign-png_98922.webp");
   /* background-color: blue; */
   background-position: center calc(var(--list-height) / 2);
