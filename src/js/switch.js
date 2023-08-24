@@ -12,7 +12,7 @@ let navUl = document.querySelector("nav > ul");
 
 let current = document.querySelector('li[data-checked="true"] > button');
 
-PAGE_TABLE.get(current.value)?.();
+PAGE_TABLE.get(current.value)();
 
 navUl.addEventListener("click", (event) => {
   let elem = event.target;
@@ -22,7 +22,7 @@ navUl.addEventListener("click", (event) => {
   current.parentElement.dataset.checked = "false";
   current = elem;
 
-  PAGE_TABLE.get(current.value)?.();
+  PAGE_TABLE.get(current.value)();
 
   current.parentElement.dataset.checked = "true";
 });
