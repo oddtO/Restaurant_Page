@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch webpack.config.js ./node_modules/.bin/webpack-dev-server"
+    "startdevserv": "nodemon --watch webpack.dev.js --exec \"npx webpack serve --open --mode development\"",
+    "compilerelease": "npx webpack --mode production"
   },
   "keywords": [],
   "author": "",
